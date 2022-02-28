@@ -22,17 +22,17 @@ function modeChange() {
 function restoreToPrev() {
     if (currentActive == "about") {
         content.hidden = true;
-        about.style.color = "#BDBDBD";
+        about.style.color = "#757575";
         work.style.cursor = "pointer";
         document.getElementById('about-underline').classList.add("underline");
     }
     else if (currentActive == "projects") {
-        projects.style.color = "#BDBDBD";
+        projects.style.color = "#757575";
         work.style.cursor = "pointer";
         document.getElementById('projects-underline').classList.add("underline");
     }
     else if (currentActive == "work") {
-        work.style.color = "#BDBDBD";
+        work.style.color = "#757575";
         work.style.cursor = "pointer";
         document.getElementById('work-underline').classList.add("underline");
     }
@@ -48,7 +48,6 @@ function moveUp(newactive) {
     linkDiv.style.top = "5%";
     linkDiv.style.fontSize="1.5em";
     secondLinkDiv.style.margin = "0 5.75%";
-    setTimeout(function () { content.hidden = false; }, 1000);
 }
 
 function activateAbout() {
@@ -56,6 +55,7 @@ function activateAbout() {
     about.style.cursor = "default";
     document.getElementById('about-underline').classList.remove("underline");
     moveUp("about");
+    setTimeout(function () { content.hidden = false; }, 1000);
 }
 
 function activateProjects() {
