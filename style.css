@@ -9,21 +9,18 @@
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* General */
 
 body {
-    height:auto;
-    width:auto;
+    height: auto;
+    width: auto;
     font-family: ADAM;
     background-color: #212121;
+    text-align: center;
 }
 
 a {
@@ -33,7 +30,7 @@ a {
 /* Animations */
 
 body > div {
-    animation: fadeIn ease-in 2s;
+    animation: fadeIn ease-out 1s;
 }
 
 /* Header Container */
@@ -44,28 +41,104 @@ body > div {
     justify-content: normal;
     align-items: center;
     align-content: normal;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    position: relative;
+    z-index: 10; /* This is to not overlap with top buttons */
 }
 
 #header-container > div {
     padding: 5px;
 }
 
-/* Switch in header */
-#header-container div:last-child {
-    margin-left:auto;
+.icon {
+    width: 50px;
 }
 
-.icon {
-    width:50px;
+/* Name */
+
+#name {
+    font-size: 7.8125em;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: default;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    top: 35%;
+    transition: 1s ease;
+    z-index: 0; /* This is to not overlap with top buttons */
+}
+
+#name > span {
+    color: #42A5F5;
+}
+
+/* Link Container */
+
+#link-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    text-align: center;
+
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    top: 45%;
+    color: #BDBDBD;
+    font-size: 3em;
+
+    transition: 1s ease;
+}
+
+#second-link-div {
+    margin: 0 11%;
+}
+
+/* Content */
+
+#content {
+    font-family:bahnschrift;
+    color:#FAFAFA;
+    font-size: 1.5625em;
+
+    width:50%;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+    top: 9%;
+    z-index: -1;
+}
+
+.page-button {
+    cursor: pointer;
+}
+
+.underline {
+    background-color: #BDBDBD;
+    display: block;
+	height: 6px;
+	margin: 2px auto;
+	width: 0;
+	transition: width .2s linear;
+}
+
+*:hover>.underline, .active>.underline {
+	width: 100%;
+}
+
+/* Switch */
+#header-container div:last-child {
+    margin-left:auto;
 }
 
 /* The switch - the box around the slider */
@@ -122,118 +195,4 @@ input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-}
-
-/* Body */
-
-#body-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: stretch;
-    padding-top:7%;
-
-    position:absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-.bdy {
-    position:absolute;
-    transition: 2s ease;
-}
-
-.top-default {
-    top:auto;
-    transition: 1s ease;
-    width:auto;
-}
-
-.top-after {
-    top:-28%;
-    width:80%;
-}
-
-/* Name */
-
-#name {
-    font-size: 7.8125em;
-    color: #FAFAFA;
-    width: 100%;
-    text-align: center;
-    cursor:default;
-}
-
-#name > p > span {
-    color: #42A5F5;
-}
-
-/* Link Container */
-
-#link-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: stretch;
-    text-align:center;
-
-    position:absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
-    top:70%;
-}
-
-#link-container div:first-child {
-    margin-right:11%;
-}
-#link-container div:last-child {
-    margin-left:11%;
-}
-
-#content {
-    font-family:bahnschrift;
-    color:#FAFAFA;
-    font-size:3em;
-
-    position:absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
-    text-align:center;
-    top:90%;
-}
-
-#temp {
-    text-align:center;
-}
-
-.belowname {
-    font-size: 3em;
-    color:#BDBDBD;
-}
-
-.page-button {
-    cursor:pointer;
-}
-
-.underline {
-    background-color:#BDBDBD;
-    display: block;
-	height: 6px;
-	margin: 2px auto;
-	width: 0;
-	transition: width .2s linear;
-}
-
-*:hover>.underline, .active>.underline {
-	width: 100%;
 }
