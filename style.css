@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: bahnschrift;
-    src: url(bahnschrift.ttf)
+    src: url(resources/bahnschrift.ttf)
 }
 
 @keyframes fadeIn {
