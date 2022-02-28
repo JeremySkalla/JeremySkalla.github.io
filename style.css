@@ -1,0 +1,175 @@
+@font-face {
+    font-family: ADAM;
+    src: url(resources/ADAM.CG-PRO.otf);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* General */
+
+body {
+    height:auto;
+    width:auto;
+    font-family: ADAM;
+    background-color: #212121;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Animations */
+
+body > div {
+    animation: fadeIn ease-in 2s;
+}
+
+/* Header Container */
+#header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: center;
+    align-content: normal;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#header-container > div {
+    padding: 5px;
+}
+
+/* Switch in header */
+#header-container div:last-child {
+    margin-left:auto;
+}
+
+.icon {
+    width:50px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 66px;
+    height: 40px;
+}
+
+/* Hide default HTML checkbox */
+.switch > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider, from: https://www.w3schools.com/howto/howto_css_switch.asp */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #BDBDBD;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius:25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Body */
+
+#name {
+    font-size: 7.8125em;
+    color: #FAFAFA;
+    width: 100%;
+    text-align: center;
+    padding-top: 7%;
+}
+
+#name > p > span {
+    color: #42A5F5;
+}
+
+/* Link Container */
+
+#link-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    margin-top:-8%;
+}
+
+#link-container div:first-child {
+    margin-right:11%;
+}
+#link-container div:last-child {
+    margin-left:11%;
+}
+
+.belowname {
+    font-size: 3em;
+    color:#BDBDBD;
+}
+
+.page-button {
+    cursor:pointer;
+}
+
+.underline {
+    background-color:#BDBDBD;
+    display: block;
+	height: 6px;
+	margin: 2px auto;
+	width: 0;
+	transition: width .2s linear;
+}
+
+*:hover>.underline, .active>.underline {
+	width: 100%;
+}
