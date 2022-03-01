@@ -21,11 +21,17 @@ body {
     font-family: ADAM;
     background-color: #212121;
     text-align: center;
-    min-width:950px;
 }
 
 a {
     text-decoration: none;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #42A5F5;
+    font-family:ADAM;
+    text-align:center;
 }
 
 /* Animations */
@@ -107,15 +113,15 @@ body > div {
 #content {
     font-family:bahnschrift;
     color: #BDBDBD;
-    font-size: 1.5625em;
-
-    width:50%;
+    font-size: 1.75em;
+    
+    width:33%;
     position: absolute;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto;
-    text-align: center;
+    text-align: left;
     top: 9%;
     z-index: -1;
 }
