@@ -1,6 +1,7 @@
 var currentActive = "main";
 var mainNewTop = "0%";
 var linkNewTextSize = "1.5em";
+
 let jeremyskalla = document.getElementById("name");
 let linkDiv = document.getElementById("link-container");
 let secondLinkDiv = document.getElementById('second-link-div');
@@ -8,18 +9,6 @@ let about = document.getElementById('about');
 let projects = document.getElementById('projects');
 let work = document.getElementById('workexp');
 let content = document.getElementById('content');
-
-function modeChange() {
-    if (jeremyskalla.style.color == "rgb(33, 33, 33)") {
-        jeremyskalla.style.color = "#FAFAFA";
-        document.body.style.backgroundColor = "#212121";
-    }
-    else {
-        console.log(jeremyskalla.style.color)
-        jeremyskalla.style.color = "#212121";
-        document.body.style.backgroundColor = "#FAFAFA";
-    }
-}
 
 function restoreToPrev() {
     if (currentActive == "about") {
@@ -77,12 +66,4 @@ function activateWork() {
 about.addEventListener('click', activateAbout);
 projects.addEventListener('click', activateProjects);
 work.addEventListener('click', activateWork);
-console.log(document.body.style.width)
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    content.style.width = "90%"; // Adjust width for mobile devices
-    content.style.fontSize = "2.5em";
-    linkDiv.style.top = "40%";
-    mainNewTop = "2.5%";
-    linkNewTextSize = "2em";
-}
+console.log(document.body.style.width);
