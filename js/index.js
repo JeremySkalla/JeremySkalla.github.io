@@ -1,6 +1,7 @@
 var currentActive = "main";
 var mainNewTop = "0%";
 var linkNewTextSize = "1.5em";
+var movedUpOnce = false;
 
 let jeremyskalla = document.getElementById("name");
 let linkDiv = document.getElementById("link-container");
@@ -9,6 +10,8 @@ let about = document.getElementById('about');
 let projects = document.getElementById('projects');
 let work = document.getElementById('workexp');
 let content = document.getElementById('content');
+let contentText = document.getElementById('content-text');
+let contentHeader = document.getElementById('content-header');
 
 function restoreToPrev() {
     if (currentActive == "about") {
@@ -30,6 +33,14 @@ function restoreToPrev() {
 }
 
 function moveUp(newactive) {
+    console.log(movedUpOnce)
+    if (!movedUpOnce) { // Changing page
+        setTimeout(function () { content.hidden = false; }, 1000); // Move this to moveUp once content done for all
+        movedUpOnce = true;
+    }
+    else {
+        setTimeout(function () { content.hidden = false; }, 100);
+    }
     restoreToPrev();
     currentActive = newactive;
 
@@ -46,7 +57,8 @@ function activateAbout() {
     about.style.cursor = "default";
     document.getElementById('about-underline').classList.remove("underline");
     moveUp("about");
-    setTimeout(function () { content.hidden = false; }, 1000); // Move this to moveUp once content done for all
+    contentText.innerHTML = aboutContent;
+    contentHeader.innerHTML = aboutHeader;
 }
 
 function activateProjects() {
@@ -54,6 +66,8 @@ function activateProjects() {
     projects.style.cursor = "default";
     document.getElementById('projects-underline').classList.remove("underline");
     moveUp("projects");
+    contentText.innerHTML = projectsContent1;
+    contentHeader.innerHTML = projectsHeader1;
 }
 
 function activateWork() {

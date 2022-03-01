@@ -25,6 +25,7 @@ body {
 
 a {
     text-decoration: none;
+    color:inherit;
 }
 
 h1 {
@@ -112,10 +113,10 @@ body > div {
 
 #content {
     font-family:bahnschrift;
-    color: #BDBDBD;
+    color: #FAFAFA;
     font-size: 1.75em;
     
-    width:33%;
+    width:40%;
     position: absolute;
     left: 0; 
     right: 0; 
@@ -124,6 +125,7 @@ body > div {
     text-align: left;
     top: 9%;
     z-index: -1;
+    transition: 1s ease;
 }
 
 .page-button {
