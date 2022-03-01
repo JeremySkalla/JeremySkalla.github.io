@@ -29,3 +29,13 @@ the github, as well as created detailed documentation about how to use the wrapp
 with this project was to help other newer coders understand how the API works. It was pretty cool getting 
 people telling me that my program helped them. I've worked on it intermittently since the start, 
 as I've needed it for another one of my projects, JUMS.`
+
+let workContent1 = `I worked at <span style="color:#216093">ActiFi</span> as a summer intern between April 2021-September 2021. 
+During this time, I had many roles. I tested and documented their SuccessPro software for implementation 
+of new features. Along with this, I gave feedback to the company on the new features. I edited training 
+video of SuccessPro for new employees at the company, as well as video of the software being used in action.  
+This was also my first time getting experience in Salesforce, where I created and implemented plugins.<br><br>
+
+On the less technical side of things, I attended meetings with the CEO and other members of the company, 
+discussing plans for growth in the future. During these meetings, I took notes and created a glossary, both 
+for the use of new employees. This was put into action when they hired a new member to the Sales team that summer.`

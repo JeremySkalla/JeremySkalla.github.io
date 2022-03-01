@@ -14,20 +14,20 @@ let contentText = document.getElementById('content-text');
 let contentHeader = document.getElementById('content-header');
 
 function restoreToPrev() {
+    content.hidden = true;
     if (currentActive == "about") {
-        content.hidden = true;
         about.style.color = "#757575";
-        work.style.cursor = "pointer";
+        about.addEventListener('click', activateAbout); // Readds ability to click
         document.getElementById('about-underline').classList.add("underline");
     }
     else if (currentActive == "projects") {
         projects.style.color = "#757575";
-        work.style.cursor = "pointer";
+        projects.addEventListener('click', activateProjects); // Readds ability to click
         document.getElementById('projects-underline').classList.add("underline");
     }
     else if (currentActive == "work") {
         work.style.color = "#757575";
-        work.style.cursor = "pointer";
+        work.addEventListener('click', activateWork); // Readds ability to click
         document.getElementById('work-underline').classList.add("underline");
     }
 }
@@ -52,9 +52,10 @@ function moveUp(newactive) {
     secondLinkDiv.style.margin = "0 5.75%";
 }
 
+// These are the same basically so I'm gonna comment only on the first
 function activateAbout() {
     about.style.color = "#42A5F5";
-    about.style.cursor = "default";
+    about.removeEventListener('click', activateAbout); // Removes ability to click
     document.getElementById('about-underline').classList.remove("underline");
     moveUp("about");
     contentText.innerHTML = aboutContent;
@@ -63,7 +64,7 @@ function activateAbout() {
 
 function activateProjects() {
     projects.style.color = "#42A5F5";
-    projects.style.cursor = "default";
+    projects.removeEventListener('click', activateProjects); // Removes ability to click
     document.getElementById('projects-underline').classList.remove("underline");
     moveUp("projects");
     contentText.innerHTML = projectsContent1;
@@ -72,9 +73,11 @@ function activateProjects() {
 
 function activateWork() {
     work.style.color = "#42A5F5";
-    work.style.cursor = "default";
+    work.removeEventListener('click', activateWork); // Removes ability to click
     document.getElementById('work-underline').classList.remove("underline");
     moveUp("work");
+    contentText.innerHTML = workContent1;
+    contentHeader.innerHTML = workHeader1;
 }
 
 about.addEventListener('click', activateAbout);
