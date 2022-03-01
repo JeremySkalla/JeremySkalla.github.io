@@ -21,6 +21,7 @@ body {
     font-family: ADAM;
     background-color: #212121;
     text-align: center;
+    min-width:950px;
 }
 
 a {
