@@ -31,13 +31,15 @@ a {
 h1 {
     font-size: 1.8em;
     color: #42A5F5;
-    font-family:ADAM;
-    text-align:center;
+    font-family: ADAM;
+    text-align: center;
 }
 
 h2 {
     font-size: 1.2em;
-    color: #42A5F5;
+    color: #757575;
+    text-align: center;
+    font-family: ADAM;
 }
 
 /* Animations */
