@@ -107,7 +107,7 @@ function prevPage() {
 }
 
 function activateAbout() {
-    about.style.color = "#42A5F5";
+    about.style.color = "#41C300";
     about.removeEventListener('click', activateAbout); // Removes ability to click
     document.getElementById('about-underline').classList.remove("underline");
     moveUp("about");
@@ -118,7 +118,7 @@ function activateAbout() {
 }
 
 function activateProjects() {
-    projects.style.color = "#42A5F5";
+    projects.style.color = "#41C300";
     projects.removeEventListener('click', activateProjects); // Removes ability to click
     document.getElementById('projects-underline').classList.remove("underline");
     contentText.innerHTML = projectsContent1;
@@ -130,7 +130,7 @@ function activateProjects() {
 }
 
 function activateWork() {
-    work.style.color = "#42A5F5";
+    work.style.color = "#41C300";
     work.removeEventListener('click', activateWork); // Removes ability to click
     document.getElementById('work-underline').classList.remove("underline");
     contentText.innerHTML = workContent1;

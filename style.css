@@ -35,7 +35,7 @@ a {
 
 h1 {
     font-size: 1.8em;
-    color: #42A5F5;
+    color: #41C300;
     font-family: ADAM;
     text-align: center;
 }
@@ -91,7 +91,7 @@ body > div {
 }
 
 #name > span {
-    color: #42A5F5;
+    color: #41C300;
 }
 
 /* Link Container */
@@ -152,7 +152,7 @@ body > div {
 .bottom {
     background-color: transparent;
     border: none;
-    color: #42A5F5;
+    color: #41C300;
     text-decoration: none;
     text-align: center;
     font-family: ADAM;
@@ -165,7 +165,6 @@ body > div {
     margin: 1%;
     cursor: pointer;
 }
-
 
 .page-button {
     cursor: pointer;
@@ -232,11 +231,11 @@ body > div {
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #41C300;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #41C300;
 }
 
 input:checked + .slider:before {
