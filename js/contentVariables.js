@@ -39,7 +39,7 @@ as I've needed it for another one of my projects, JUMS.`;
 
 let projectsHeaderArr = ["<a href=\"https://github.com/JeremySkalla/pysmashgg\">Pysmashgg</a>", 
                         "This Website", "JUMS", "Discord Queue Bot"];
-let projectsH2Arr = ["December 2020-Current", "December 2021-Current", "February 2022-Current", "January 2021-March 2021"]
+let projectsH2Arr = ["December 2020-Current", "February 2022-Current", "December 2021-Current", "January 2021-March 2021"]
 let projectsContentArr = [projectsContent1, "TODO", "TODO", "TODO"];
 
 let workContent1 = `I worked at <span style="color:#216093">ActiFi</span> as a summer intern between April 2021-September 2021. 
