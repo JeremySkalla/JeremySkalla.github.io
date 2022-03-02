@@ -83,7 +83,7 @@ function nextPage() {
     else if (currentActive == "work") {
         workPage += 1;
         contentHeader.innerHTML = workHeaderArr[workPage];
-        contentSubHeader.innerHTML = projectsH2Arr[workPage];
+        contentSubHeader.innerHTML = workH2Arr[workPage];
         contentText.innerHTML = workContentArr[workPage];
         buttons.innerHTML = pageButtons(workPage);
     }
@@ -100,7 +100,7 @@ function prevPage() {
     else if (currentActive == "work") {
         workPage -= 1;
         contentHeader.innerHTML = workHeaderArr[workPage];
-        contentSubHeader.innerHTML = projectsH2Arr[workPage];
+        contentSubHeader.innerHTML = workH2Arr[workPage];
         contentText.innerHTML = workContentArr[workPage];
         buttons.innerHTML = pageButtons(workPage);
     }
