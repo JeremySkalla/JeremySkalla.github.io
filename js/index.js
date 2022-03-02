@@ -1,7 +1,11 @@
 var currentActive = "main";
-var mainNewTop = "0%";
+var mainNewTop = "1%";
 var linkNewTextSize = "1.5em";
 var movedUpOnce = false;
+var projectsPage = 0;
+var workPage = 0;
+var numPPages = projectsContentArr.length-1;
+var numWPages = workContentArr.length-1;
 
 let jeremyskalla = document.getElementById("name");
 let linkDiv = document.getElementById("link-container");
@@ -12,6 +16,8 @@ let work = document.getElementById('workexp');
 let content = document.getElementById('content');
 let contentText = document.getElementById('content-text');
 let contentHeader = document.getElementById('content-header');
+let contentSubHeader = document.getElementById('content-subheader');
+let buttons = document.getElementById('bottom-buttons');
 
 function restoreToPrev() {
     content.hidden = true;
@@ -33,7 +39,6 @@ function restoreToPrev() {
 }
 
 function moveUp(newactive) {
-    console.log(movedUpOnce)
     if (!movedUpOnce) { // Changing page
         setTimeout(function () { content.hidden = false; }, 1000); // Move this to moveUp once content done for all
         movedUpOnce = true;
@@ -52,7 +57,55 @@ function moveUp(newactive) {
     secondLinkDiv.style.margin = "0 5.75%";
 }
 
-// These are the same basically so I'm gonna comment only on the first
+function pageButtons(pageCount) { // Retrieves buttons for both projects and work
+    if (pageCount == 0) {
+        return firstButtons; 
+    }
+    else if (currentActive == "projects" && pageCount == numPPages) {
+        return lastButtons; 
+    }
+    else if (currentActive == "work" && pageCount == numWPages) {
+        return lastButtons; 
+    }
+    else { 
+        return middleButtons; 
+    }
+}
+
+function nextPage() {
+    if (currentActive == "projects") {
+        projectsPage += 1;
+        contentHeader.innerHTML = projectsHeaderArr[projectsPage];
+        contentSubHeader.innerHTML = projectsH2Arr[projectsPage];
+        contentText.innerHTML = projectsContentArr[projectsPage];
+        buttons.innerHTML = pageButtons(projectsPage);
+    }
+    else if (currentActive == "work") {
+        workPage += 1;
+        contentHeader.innerHTML = workHeaderArr[workPage];
+        contentSubHeader.innerHTML = projectsH2Arr[workPage];
+        contentText.innerHTML = workContentArr[workPage];
+        buttons.innerHTML = pageButtons(workPage);
+    }
+}
+
+function prevPage() {
+    if (currentActive == "projects") {
+        projectsPage -= 1;
+        contentHeader.innerHTML = projectsHeaderArr[projectsPage];
+        contentSubHeader.innerHTML = projectsH2Arr[projectsPage];
+        contentText.innerHTML = projectsContentArr[projectsPage];
+        buttons.innerHTML = pageButtons(projectsPage);
+    }
+    else if (currentActive == "work") {
+        workPage -= 1;
+        contentHeader.innerHTML = workHeaderArr[workPage];
+        contentSubHeader.innerHTML = projectsH2Arr[workPage];
+        contentText.innerHTML = workContentArr[workPage];
+        buttons.innerHTML = pageButtons(workPage);
+    }
+}
+
 function activateAbout() {
     about.style.color = "#42A5F5";
     about.removeEventListener('click', activateAbout); // Removes ability to click
@@ -60,27 +113,34 @@ function activateAbout() {
     moveUp("about");
     contentText.innerHTML = aboutContent;
     contentHeader.innerHTML = aboutHeader;
+    contentSubHeader.innerHTML = "";
+    buttons.innerHTML = "";
 }
 
 function activateProjects() {
     projects.style.color = "#42A5F5";
     projects.removeEventListener('click', activateProjects); // Removes ability to click
     document.getElementById('projects-underline').classList.remove("underline");
-    moveUp("projects");
     contentText.innerHTML = projectsContent1;
-    contentHeader.innerHTML = projectsHeader1;
+    contentHeader.innerHTML = projectsHeaderArr[0];
+    contentSubHeader.innerHTML = projectsH2Arr[0];
+    buttons.innerHTML = firstButtons;
+    projectsPage = 0;
+    moveUp("projects");
 }
 
 function activateWork() {
     work.style.color = "#42A5F5";
     work.removeEventListener('click', activateWork); // Removes ability to click
     document.getElementById('work-underline').classList.remove("underline");
-    moveUp("work");
     contentText.innerHTML = workContent1;
-    contentHeader.innerHTML = workHeader1;
+    contentHeader.innerHTML = workHeaderArr[0];
+    contentSubHeader.innerHTML = workH2Arr[0];
+    buttons.innerHTML = firstButtons;
+    workPage = 0;
+    moveUp("work");
 }
 
 about.addEventListener('click', activateAbout);
 projects.addEventListener('click', activateProjects);
 work.addEventListener('click', activateWork);
-console.log(document.body.style.width);

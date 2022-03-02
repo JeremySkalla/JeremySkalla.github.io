@@ -13,6 +13,11 @@
     to { opacity: 1; }
 }
 
+@keyframes fadeOut {
+    from { opacity: .65; }
+    to { opacity: 0; }
+}
+
 /* General */
 
 body {
@@ -132,8 +137,35 @@ body > div {
     text-align: left;
     top: 9%;
     z-index: -1;
-    transition: 1s ease;
 }
+
+#bottom-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: normal;
+    text-align:center;
+}
+
+.bottom {
+    background-color: transparent;
+    border: none;
+    color: #42A5F5;
+    text-decoration: none;
+    text-align: center;
+    font-family: ADAM;
+    font-size: 1.3em;
+
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    margin: 1%;
+    cursor: pointer;
+}
+
 
 .page-button {
     cursor: pointer;
