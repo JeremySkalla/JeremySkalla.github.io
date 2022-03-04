@@ -3,6 +3,7 @@
 <html lang="en">
     <head>
         <title>Jeremy Skalla</title>
+        <link id="testico" type="image/x-icon" rel="icon" href="resources/logo-dark.png">
         <link type="text/css" rel="stylesheet" href="style.css">
 
         <!-- Meta -->
@@ -22,15 +23,10 @@
         <meta name="theme-color" content="#41C300">
     </head>
     <body>
-        <div id="header-container">
+        <div id="header-container" >
             <div>
                 <a href="https://github.com/JeremySkalla">
                     <img src="resources/github.png" alt="Github" class="icon" style="z-index:10;">
-                </a>
-            </div>
-            <div>
-                <a href="https://www.instagram.com/jeremyskalla/">
-                    <img src="resources/instagram.png" alt="Instagram" class="icon" style="z-index:10;">
                 </a>
             </div>
             <div>
@@ -45,8 +41,20 @@
                 </label>
             </div>
         </div>
+        <div id="header-container-two">
+            <div>
+                <a href="https://www.instagram.com/jeremyskalla/">
+                    <img src="resources/instagram.png" alt="Instagram" class="icon" style="z-index:-3;">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.last.fm/user/JSkalla">
+                    <img src="resources/lastfm.png" alt="last.fm" class="icon" style="z-index:-3;">
+                </a>
+            </div>
+        </div>
         <div id="name">
-            <span>Jeremy</span> Skalla
+            <span id="jeremy-color">Jeremy</span> Skalla
         </div>
         <div id="link-container">
             <div>
@@ -78,9 +86,12 @@
             <h1 id="content-header">Temp</h1>
             <h2 id="content-subheader">Temp</h2>
             <p id="content-text">Temp</p>
-            <div id="bottom-buttons">Temp</div>
+            <div id="bottom-buttons">
+                <button id="prev" onclick="prevPage()" onmouseover>Prev</button>
+                <button id="next" onclick="nextPage()">Next</button>
+            </div>
         </div>
-        
+        <script src="js/randomColor.js"></script>
         <script src="js/contentVariables.js"></script>
         <script src="js/index.js"></script>
         <script src="js/mobileChecking.js"></script>

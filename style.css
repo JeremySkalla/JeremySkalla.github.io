@@ -8,6 +8,11 @@
     src: url(resources/bahnschrift.ttf)
 }
 
+:root {
+    --highlight-color: #41C300;
+    --mouseover-color: #FAFAFA
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -35,7 +40,7 @@ a {
 
 h1 {
     font-size: 1.8em;
-    color: #41C300;
+    color: var(--highlight-color);
     font-family: ADAM;
     text-align: center;
 }
@@ -65,7 +70,24 @@ body > div {
     z-index: 10; /* This is to not overlap with top buttons */
 }
 
+/* Header Container */
+#header-container-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: center;
+    align-content: flex-start;
+    position: relative;
+    z-index: 10; /* This is to not overlap with top buttons */
+    width: 150px;
+}
+
 #header-container > div {
+    padding: 5px;
+}
+
+#header-container-two > div {
     padding: 5px;
 }
 
@@ -90,8 +112,8 @@ body > div {
     z-index: 0; /* This is to not overlap with top buttons */
 }
 
-#name > span {
-    color: #41C300;
+#jeremy-color {
+    color: var(--highlight-color);
 }
 
 /* Link Container */
@@ -152,18 +174,19 @@ body > div {
 .bottom {
     background-color: transparent;
     border: none;
-    color: #41C300;
+    color: var(--highlight-color);
     text-decoration: none;
     text-align: center;
     font-family: ADAM;
     font-size: 1.3em;
 
-    padding-top: 1%;
-    padding-bottom: 2%;
-    padding-left: 1.5%;
     padding-right: 1.5%;
     margin: 1%;
     cursor: pointer;
+}
+
+.bottom:hover {
+    color: var(--mouseover-color);
 }
 
 .page-button {
@@ -231,11 +254,11 @@ body > div {
 }
 
 input:checked + .slider {
-    background-color: #41C300;
+    background-color: var(--highlight-color);
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #41C300;
+    box-shadow: 0 0 1px var(--highlight-color);
 }
 
 input:checked + .slider:before {

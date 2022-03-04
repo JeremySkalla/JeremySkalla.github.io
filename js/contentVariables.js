@@ -1,9 +1,5 @@
 let aboutHeader = "Who Am I?";
 
-let workHeader1 = "ActiFi";
-let workHeader2 = "temp1"
-let workHeader3 = "temp2"
-
 let firstButtons = `<button class="bottom" onclick="nextPage()">Next</button>`;
 let middleButtons = `<button class="bottom" onclick="prevPage()">Prev</button>
 <button class="bottom" onclick="nextPage()">Next</button>`;
