@@ -22,15 +22,17 @@ let projectsContent1 = `<a href="https://github.com/JeremySkalla/pysmashgg" styl
 <a href="https://smash.gg/" style="color:#cb333b">smash.gg's</a> 
 API that takes inspiration from older wrappers, but it useds the GraphQL API instead of the older, 
 slower one. It has over 16,000 downloads on PyPI and Github. I started this project in December 2020 over  
-winter break. I had wanted to learn about APIs (since I hadn't learned much in school about them) and I had familiarity 
-with smashgg, so it seemed like a great fit. I looked for wrappers at first, but all that existed were out of date ones 
-or poorly written/documented ones. So, I decided to create my own.<br><br>
+winter break.<br>
 
-This was written all in <span style="color:#306998">Python</span>. I organized and hosted the files in 
-the github, as well as created detailed documentation about how to use the wrapper. One of my biggest goals 
-with this project was to help other newer coders understand how the API works. It's cool when people tell 
-me that my wrapper helped them with their projects. I continue to work on it to this day,
-as I've needed it for another one of my projects, JUMS.`;
+<figure>
+    <img src="resources/pysmashgg-readme.png" class="incontentimg" alt="Part of the README.md for pysmashgg">
+    <figcaption>Part of the README.md for pysmashgg</figcaption>
+</figure>
+
+This was written all in <span style="color:#306998">Python</span>. I was able to create documentation about how to 
+use the wrapper. One of my biggest goals with this project was to help other newer coders understand how the API works. 
+It's cool when people tell me that my wrapper helped them with their projects. I continue to work on it to this day 
+intermittently. I've extended it for use in another one of my projects, JUMS.`;
 
 let projectsContent2 = `<a href="https://github.com/JeremySkalla/JeremySkalla.github.io"><span class="jeremy-color">This Website</span></a>
 was a passion project I started during my time taking CSCI4131 at the University of Minnesota. The class was my first real 
